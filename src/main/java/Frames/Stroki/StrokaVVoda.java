@@ -1,5 +1,8 @@
 package Frames.Stroki;
 
+import javax.swing.*;
+
 public interface StrokaVVoda {
-    public String getjTextField();
+    public JTextField getJTextField();
+    public String getText();
 }

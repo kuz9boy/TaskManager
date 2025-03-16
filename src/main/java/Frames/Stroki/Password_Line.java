@@ -4,11 +4,10 @@ import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 @Component
-public class Name_Line implements StrokaVVoda{
-
+public class Password_Line implements StrokaVVoda{
     JTextField jTextField = new JTextField(20);
 
-    public Name_Line(){
+    public Password_Line(){
 
     }
     String input;
