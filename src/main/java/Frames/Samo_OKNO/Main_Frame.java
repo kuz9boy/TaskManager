@@ -8,12 +8,21 @@ import javax.swing.*;
 public class Main_Frame {
 
    private JFrame frame = new JFrame("Task Manager");
-    public JFrame createWindo() {
+
+
+    public void createWindo() {
 
 
         frame.setSize(1000, 1000);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+
+    }
+
+    public void add_to_Frame(JPanel jPanel){
+        frame.add(jPanel);
+    }
+    public JFrame getFrame(){
         return frame;
     }
 }

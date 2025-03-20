@@ -1,14 +1,14 @@
-package Frames.Stroki;
+package Frames.Stroki.For_Second_Frame;
 
+import Frames.Stroki.StrokaVVoda;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 @Component
-public class Name_Line implements StrokaVVoda{
-
+public class Stroka_for_DATA implements StrokaVVoda {
     JTextField jTextField = new JTextField(20);
 
-    public Name_Line(){
+    public Stroka_for_DATA(){
 
     }
     String input;

@@ -1,13 +1,14 @@
-package Frames.Stroki;
+package Frames.Stroki.For_Second_Frame;
 
+import Frames.Stroki.StrokaVVoda;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 @Component
-public class Password_Line implements StrokaVVoda{
+public class Stroka_for_deadline implements StrokaVVoda {
     JTextField jTextField = new JTextField(20);
 
-    public Password_Line(){
+    public Stroka_for_deadline(){
 
     }
     String input;

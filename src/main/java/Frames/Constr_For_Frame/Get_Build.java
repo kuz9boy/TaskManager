@@ -1,6 +1,8 @@
 package Frames.Constr_For_Frame;
 
 import Frames.Buttons.Button;
+import Frames.Labels.Label_INT;
+import Frames.Stroki.StrokaVVoda;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -13,7 +15,7 @@ public class Get_Build {
     public Get_Build(){}
 
     public JButton addButton(Button button) {
-        JButton jButton = new JButton("Click me!");
+        JButton jButton = button.getBut();
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -22,23 +24,17 @@ public class Get_Build {
         });
         return jButton;
     }
+
+
+//
+    public JLabel addStroku(Label_INT label) {
+        JLabel jLabel = new JLabel();
+        return jLabel;
+
+
+    }
+    public JTextField addSmth(StrokaVVoda strokaVVoda) {
+        return strokaVVoda.getJTextField();
+    }
+
 }
-
-//
-//    public JLabel addStroku(Label label) {
-//        JLabel jLabel = new JLabel();
-//        return jLabel;
-//
-//
-//    }
-//
-//
-//    public JTextField addSmth(StrokaVVoda strokaVVoda) {
-//        JTextField jTextField = new JTextField(20);
-//
-//
-//
-//        return jTextField;
-//    }
-
-
