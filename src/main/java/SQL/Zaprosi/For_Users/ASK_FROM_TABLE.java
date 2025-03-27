@@ -7,11 +7,11 @@ import java.util.List;
 
 public class ASK_FROM_TABLE {
 
-    // При желании EntityManagerFactory можно вынести в статическое поле
+
     private static final EntityManagerFactory FACTORY = Persistence.createEntityManagerFactory("jpa-course");
 
     public static ZZ searchInTable(Class<? extends ZZ> zzClass, String... values) {
-        // Проверка на валидность количества параметров
+
         if (values.length % 2 != 0) {
             throw new IllegalArgumentException("Values must contain an even number of elements (field-value pairs).");
         }
@@ -20,7 +20,7 @@ public class ASK_FROM_TABLE {
         ZZ zz = null;
 
         try {
-            // Формируем запрос JPQL
+
             StringBuilder jpql = new StringBuilder("SELECT e FROM ");
             jpql.append(zzClass.getSimpleName()).append(" e");
 
@@ -34,18 +34,17 @@ public class ASK_FROM_TABLE {
                 }
             }
 
-            // Создаем запрос
+
             TypedQuery<? extends ZZ> query = manager.createQuery(jpql.toString(), zzClass);
 
-            // Устанавливаем параметры
+
             for (int i = 0; i < values.length; i += 2) {
                 query.setParameter("param" + (i / 2), values[i + 1]);
             }
 
-            // Получаем результат (попробуем получить первую запись, если список не пуст)
             List<? extends ZZ> results = query.getResultList();
             if (!results.isEmpty()) {
-                zz = results.get(0); // Берем только первый элемент
+                zz = results.get(0);
             }
         } catch (NoResultException e) {
             System.out.println("No results found for the given query.");
@@ -55,6 +54,6 @@ public class ASK_FROM_TABLE {
             if (manager != null) manager.close();
         }
 
-        return zz; // Вернем найденный объект или null
+        return zz;
     }
 }

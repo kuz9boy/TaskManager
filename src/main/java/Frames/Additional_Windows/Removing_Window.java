@@ -3,6 +3,7 @@ package Frames.Additional_Windows;
 import Frames.Buttons.BUTTONS;
 import Frames.Constr_For_Frame.AA;
 import Frames.Constr_For_Frame.Get_Build;
+import Frames.Every_Frame.Second_Frame;
 import Frames.Samo_OKNO.Getting_JPanal;
 import Frames.Samo_OKNO.Main_Frame;
 import Frames.Stroki.STROKS;
@@ -14,25 +15,37 @@ import javax.swing.*;
 
 @Component
 public class Removing_Window {
-    private final Main_Frame mainFrame;
-    private final Get_Build getBuild;
-    private final AA aa;
-    private final Getting_JPanal gettingJPanal;
-    private JDialog dialog;
+
+
+    private AA aa;
+    private Main_ADD_WIND mainAddWind;
+    private Getting_JPanal gettingJPanal;
+    private Second_Frame secondFrame;
 
     @Autowired
-    public Removing_Window(@Qualifier("main_Frame") Main_Frame mainFrame, Get_Build getBuild, AA aa, Getting_JPanal gettingJPanal) {
-        this.mainFrame = mainFrame;
-        this.getBuild = getBuild;
+    public void setAA(AA aa) {
         this.aa = aa;
-        this.dialog = new JDialog(mainFrame.getFrame(), "Окно для удаления задачи", true);
+    }
+
+    @Autowired
+    public void setMainAddWind(Main_ADD_WIND mainAddWind) {
+        this.mainAddWind = mainAddWind;
+    }
+
+    @Autowired
+    public void setGettingJPanal(Getting_JPanal gettingJPanal) {
         this.gettingJPanal = gettingJPanal;
     }
 
+    @Autowired
+    public void setSecondFrame(Second_Frame secondFrame) {
+        this.secondFrame = secondFrame;
+    }
+
     public void showDial() {
-        dialog.setSize(300, 150);
+        mainAddWind.getjDialog().setSize(300, 150);
         gettingJPanal.getjPanel().removeAll();
-        dialog.add(aa.getBut(BUTTONS.REMOVING_BUTTON));
-        dialog.add(aa.getStroka(STROKS.STROKA_NAME));
+        mainAddWind.getjDialog().add(aa.getBut(BUTTONS.REMOVING_BUTTON));
+        mainAddWind.getjDialog().add(aa.getStroka(STROKS.STROKA_NAME));
     }
 }

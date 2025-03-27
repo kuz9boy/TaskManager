@@ -27,7 +27,7 @@ public class Users implements ZZ {
 
     public void addTaskForUsers(Taskses task) {
         tasksesList.add(task);
-        task.setUser(this); // Устанавливаем пользователя для задачи
+        task.setUser(this);
     }
 
 

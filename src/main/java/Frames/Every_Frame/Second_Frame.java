@@ -20,6 +20,8 @@ public class Second_Frame {
     }
     public void initialize(){
         gettingJPanal.getjPanel().removeAll();
+        mainFrame.getFrame().repaint();
+        mainFrame.getFrame().revalidate();
         mainFrame.add_to_Frame(aa.getBut(BUTTONS.BUTTON_ADD_TASK));
         mainFrame.add_to_Frame(aa.getBut(BUTTONS.REMOVING_BUTTON2));
         mainFrame.add_to_Frame(aa.getLabel());

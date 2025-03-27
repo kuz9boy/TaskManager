@@ -14,7 +14,7 @@ public class Taskses implements ZZ {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private Users user; // Изменяем тип на Users
+    private Users user;
 
     @Column(name = "task_title")
     private String taskTitle;
@@ -32,7 +32,7 @@ public class Taskses implements ZZ {
     }
 
     public Taskses(Users user, String taskTitle, String taskDescription, Date date, Date deadline) {
-        this.user = user; // Устанавливаем пользователя
+        this.user = user;
         this.taskTitle = taskTitle;
         this.taskDescription = taskDescription;
         this.date = date;
@@ -56,11 +56,11 @@ public class Taskses implements ZZ {
     }
 
     public Users getUser() {
-        return user; // Возвращаем объект пользователя
+        return user;
     }
 
     public void setUser(Users user) {
-        this.user = user; // Устанавливаем объект пользователя
+        this.user = user;
     }
 
     public String getTaskTitle() {

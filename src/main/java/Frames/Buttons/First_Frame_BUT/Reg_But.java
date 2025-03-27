@@ -17,10 +17,12 @@ public class Reg_But implements Button {
     private final JButton button = new JButton("Registrate");
     private final Name_Line nameLine;
     private final Password_Line passwordLine;
-
-
-    public Reg_But(Name_Line nameLine, Password_Line passwordLine) {
+    private final ClearFrame clearFrame;
+    private final Second_Frame secondFrame;
+    public Reg_But(Name_Line nameLine, Password_Line passwordLine, ClearFrame clearFrame, Second_Frame secondFrame) {
         this.passwordLine = passwordLine;
+        this.clearFrame = clearFrame;
+        this.secondFrame = secondFrame;
 
 
         this.button.setSize(100, 50);
@@ -41,11 +43,12 @@ public class Reg_But implements Button {
             Users user = ADD_IN_TABLE.add_in(Users.class, a, c);
             Current_User.setCurrentUser(user);
             System.out.println("вы вошли");
-
+//            clearFrame.clear();
+            secondFrame.initialize();
 
 
         }
-        System.out.println(a);
+
     }
     public JButton getBut(){
         return button;

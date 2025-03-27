@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.util.List;
 @Component
 public class Show_Tasks implements Label_INT {
-    private static JLabel jLabel;
+    private static JLabel jLabel = new JLabel();
 
 
 

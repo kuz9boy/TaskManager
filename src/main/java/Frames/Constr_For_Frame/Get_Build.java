@@ -26,7 +26,7 @@ public class Get_Build {
     }
 
 
-//
+
     public JLabel addStroku(Label_INT label) {
         JLabel jLabel = new JLabel();
         return jLabel;

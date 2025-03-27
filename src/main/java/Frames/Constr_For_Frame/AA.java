@@ -16,19 +16,22 @@ public class AA {
     private But_to_Jpanal butToJpanal;
     private Labal_to_Jpanal labalToJpanal;
     private Stroka_to_Jpanal strokaToJpanal;
+
     @Autowired
     public void setButToJpanal(But_to_Jpanal butToJpanal) {
         this.butToJpanal = butToJpanal;
     }
+
     @Autowired
-    public void setLabel(Labal_to_Jpanal labalToJpanal){
+    public void setLabel(Labal_to_Jpanal labalToJpanal) {
         this.labalToJpanal = labalToJpanal;
     }
 
     @Autowired
-    public void setStrokaToJpanal(Stroka_to_Jpanal strokaToJpanal){
-        this.labalToJpanal = labalToJpanal;
+    public void setStrokaToJpanal(Stroka_to_Jpanal strokaToJpanal) {
+        this.strokaToJpanal = strokaToJpanal;
     }
+
     public JPanel getLabel() {
         return labalToJpanal.setLabel();
     }
