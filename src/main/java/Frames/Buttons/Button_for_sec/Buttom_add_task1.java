@@ -27,6 +27,9 @@ public class Buttom_add_task1 implements Button {
     private final Show_Tasks showTasks;
 
 
+
+
+    @Autowired
     public Buttom_add_task1(Stroka_for_ADD_task_Name strokaForAddTaskName, Stroka_for_ADD_task_Discrip strokaForAddTaskDiscrip,
                             Stroka_for_DATA strokaForData, Stroka_for_deadline strokaForDeadline, Show_Tasks showTasks)
 
@@ -67,7 +70,7 @@ public class Buttom_add_task1 implements Button {
 
     @Override
     public JButton getBut() {
-        return null;
+        return regisBut;
     }
 
 

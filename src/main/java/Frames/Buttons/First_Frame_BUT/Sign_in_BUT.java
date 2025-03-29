@@ -18,10 +18,11 @@ public class Sign_in_BUT implements Button {
     JButton button = new JButton("Sign_IN");
     private final Password_Line passwordLine;
     private final Name_Line nameLine;
+    private final Second_Frame secondFrame;
 
-
-    public Sign_in_BUT(Name_Line nameLine, Password_Line passwordLine) {
+    public Sign_in_BUT(Name_Line nameLine, Password_Line passwordLine, Second_Frame secondFrame) {
         this.passwordLine = passwordLine;
+        this.secondFrame = secondFrame;
 
 
         this.button.setSize(100, 50);
@@ -44,7 +45,7 @@ public class Sign_in_BUT implements Button {
             } else {
                 System.out.println("Вы вошли");
                 Current_User.setCurrentUser(user);
-
+                secondFrame.initialize();
 
             }
         }

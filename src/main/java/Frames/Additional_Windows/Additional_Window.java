@@ -15,7 +15,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 @Component
-public class Additional_Window {
+public class    Additional_Window {
     private AA aa;
     private Main_ADD_WIND mainAddWind;
     private Getting_JPanal gettingJPanal;
@@ -42,15 +42,13 @@ public class Additional_Window {
     }
 
     public void showDial() {
-        mainAddWind.getjDialog().setSize(300, 150);
         gettingJPanal.getjPanel().removeAll();
+        mainAddWind.getjDialog().setSize(300, 150);
         mainAddWind.getjDialog().add(aa.getBut(BUTTONS.BUTTON_ADD_TASK1));
         mainAddWind.getjDialog().add(aa.getStroka(STROKS.STROKA_FOR_ADD_TASK_NAME));
         mainAddWind.getjDialog().add(aa.getStroka(STROKS.STROKA_FOR_ADD_TASK_DISC));
         mainAddWind.getjDialog().add(aa.getStroka(STROKS.STROKA_FOR_ADD_TASK_DATA));
         mainAddWind.getjDialog().add(aa.getStroka(STROKS.STROKA_FOR_ADD_TASK_DEADLINE));
-
-        mainAddWind.getjDialog().setLayout(new FlowLayout());
 
         mainAddWind.getjDialog().addWindowListener(new WindowAdapter() {
             @Override

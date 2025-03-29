@@ -26,9 +26,9 @@ public class Button_for_Remove implements Button {
 
     @Override
     public void buttomFunction() {
-        String s = removingStroka.getText();
+        String s = removingStroka.getText().trim();
         Remove_from_Task.removTask(s);
-        showTasks.refreshTasks();
+        System.out.println("GFDIKGHJROIE"+s);
 
     }
 

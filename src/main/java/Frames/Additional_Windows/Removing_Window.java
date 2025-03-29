@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 @Component
 public class Removing_Window {
@@ -43,9 +45,16 @@ public class Removing_Window {
     }
 
     public void showDial() {
-        mainAddWind.getjDialog().setSize(300, 150);
         gettingJPanal.getjPanel().removeAll();
+        mainAddWind.getjDialog().setSize(300, 150);
         mainAddWind.getjDialog().add(aa.getBut(BUTTONS.REMOVING_BUTTON));
-        mainAddWind.getjDialog().add(aa.getStroka(STROKS.STROKA_NAME));
+        mainAddWind.getjDialog().add(aa.getStroka(STROKS.REMOVING_STROKA));
+        mainAddWind.getjDialog().addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                secondFrame.initialize();
+            }
+        });
+        mainAddWind.getjDialog().setVisible(true);
     }
 }

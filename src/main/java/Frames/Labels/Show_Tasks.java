@@ -23,14 +23,16 @@ public class Show_Tasks implements Label_INT {
         jLabel.setText("<html>" + sb.toString().replaceAll("\n", "<br>") + "</html>");
     }
 
+    @Override
+    public JLabel getLabel() {
+        updateTasks();
+        return jLabel;
 
+    }
     public  void refreshTasks() {
         updateTasks();
     }
 
 
-    @Override
-    public JLabel getLabel() {
-        return jLabel;
-    }
+
 }
